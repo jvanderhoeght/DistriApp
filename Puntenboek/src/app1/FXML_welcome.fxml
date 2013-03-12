@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml" fx:controller="app1.PuntenboekController">
+  <children>
+    <MenuBar id="menus" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="700.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Overzicht">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toShowClassesPanel" text="Toon Klassen" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowStudentsPanel" text="Toon Studenten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowPointsPanel" text="Toon Punten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowTestsPanel" text="Toon Testen" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Voeg toe">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toAddStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddClassPanel" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddPointPanel" text="Punt" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toEditStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditClassPanel" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditPointPanel" text="Punt" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane id="puntenPane" layoutY="24.0" prefHeight="476.0" prefWidth="700.0">
+      <children>
+        <Label layoutX="230.0" layoutY="200.0" prefWidth="240.0" text="Welkom bij Puntenboek 1.0" textFill="#1000cc">
+          <font>
+            <Font name="System Italic" size="20.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

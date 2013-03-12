@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml" fx:controller="app1.PuntenboekController">
+  <children>
+    <MenuBar id="menus" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="700.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Overzicht">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toShowClassesPanel" text="Toon Klassen" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowStudentsPanel" text="Toon Studenten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowPointsPanel" text="Toon Punten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowTestsPanel" text="Toon Testen" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Voeg toe">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toAddStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddClassPanel" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddPointPanel" text="Punt" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toEditStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditClassPanel" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditPointPanel" text="Punt" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane layoutY="24.0" prefHeight="476.0" prefWidth="700.0">
+      <children>
+        <Button layoutX="58.0" layoutY="53.0" mnemonicParsing="false" onAction="#showClasses" prefWidth="110.0" text="Toon klassen" />
+        <ComboBox fx:id="classList" disable="true" layoutX="187.0" layoutY="53.0" prefHeight="21.0" prefWidth="135.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Button fx:id="studentButton" disable="true" layoutX="58.0" layoutY="87.0" mnemonicParsing="false" onAction="#getStudents" prefWidth="110.0" text="Toon studenten" />
+        <ComboBox id="classList" fx:id="studentList" disable="true" layoutX="187.0" layoutY="87.0" prefHeight="21.0" prefWidth="135.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label layoutX="58.0" layoutY="14.0" text="Puntenoverzicht" textFill="#1000cc">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </Label>
+        <TableView fx:id="pointView" layoutX="58.0" layoutY="164.0" prefHeight="276.0" prefWidth="353.0" visible="false">
+          <columns>
+            <TableColumn minWidth="100.0" prefWidth="252.0" text="Test" fx:id="testcol" />
+            <TableColumn prefWidth="100.0" text="Punten" fx:id="pointscol" />
+          </columns>
+        </TableView>
+        <Button fx:id="pointButton" layoutX="58.0" layoutY="121.0" mnemonicParsing="false" onAction="#getPoints" prefWidth="107.0" text="Toon punten" visible="false" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

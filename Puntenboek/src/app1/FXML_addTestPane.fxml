@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml" fx:controller="app1.PuntenboekController">
+  <children>
+    <MenuBar id="menus" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="700.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Overzicht">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toShowClassesPanel" text="Toon Klassen" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowStudentsPanel" text="Toon Studenten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowPointsPanel" text="Toon Punten" />
+            <MenuItem mnemonicParsing="false" onAction="#toShowTestsPanel" text="Toon Testen" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Voeg toe">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toAddStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toAddPointPanel" text="Punt" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#toEditStudentPanel" text="Student" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditClassPanel" text="Klas" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditTestPanel" text="Test" />
+            <MenuItem mnemonicParsing="false" onAction="#toEditPointPanel" text="Punt" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane layoutY="24.0" prefHeight="475.9998779296875" prefWidth="700.0">
+      <children>
+        <Label layoutX="58.0" layoutY="14.0" text="Voeg een test toe" textFill="#1000cc">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </Label>
+        <Label layoutX="58.0" layoutY="56.0" text="Titel" />
+        <Label layoutX="58.0" layoutY="94.0" text="Klas" />
+        <Label layoutX="58.0" layoutY="132.0" text="Maximum aantal punten" />
+        <TextField fx:id="titleField" layoutX="216.0" layoutY="53.0" prefWidth="200.0" />
+        <TextField id="maxpoints" fx:id="maxpointsField" layoutX="216.0" layoutY="132.0" prefWidth="200.0" />
+        <ComboBox fx:id="classList" disable="true" layoutX="216.0" layoutY="89.0" prefHeight="21.0" prefWidth="200.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Button layoutX="444.0" layoutY="89.0" mnemonicParsing="false" onAction="#showClasses" text="Vul klaslijst" />
+        <Button layoutX="58.0" layoutY="171.0" mnemonicParsing="false" onAction="#addTest" text="Voeg Toe" />
+        <Label id="errorlabel1" fx:id="errorLabel1" layoutX="216.0" layoutY="170.0" text="Label" textFill="RED" visible="false">
+          <font>
+            <Font name="System Bold" size="14.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="oklabel1" font="$x1" layoutX="58.0" layoutY="209.0" text="De test werd toegevoegd" textFill="#1400ff" visible="false" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
